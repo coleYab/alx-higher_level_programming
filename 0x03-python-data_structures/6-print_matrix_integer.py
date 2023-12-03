@@ -1,7 +1,7 @@
-#!/usrr/bin/python3
+#!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     if matrix == [[]]:
-        print('')
+        print('\n', end='')
     for i in range(len(matrix)):
         token = ' '
         for j in range(len(matrix[i])):
@@ -9,4 +9,4 @@ def print_matrix_integer(matrix=[[]]):
                 token = '\n'
             else:
                 token = ' '
-            print(f"{matrix[i][j]}", end=token)
+            print("{:d}".format(matrix[i][j]), end=token)
