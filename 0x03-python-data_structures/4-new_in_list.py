@@ -6,5 +6,5 @@ def new_in_list(my_list, idx, element):
         if i != idx or idx < 0 or idx >= length:
             list_new.append(my_list[i])
         else:
-            list_new[idx] = element
+            list_new.append(element)
     return list_new
