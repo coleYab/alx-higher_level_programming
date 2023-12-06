@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 def best_score(a_dictionary):
     if a_dictionary == None or a_dictionary == {}:
         return None
@@ -6,4 +6,4 @@ def best_score(a_dictionary):
     for i, value in a_dictionary.items():
         if maximum < value:
             maximum = value
-    return maximum
+    return i
