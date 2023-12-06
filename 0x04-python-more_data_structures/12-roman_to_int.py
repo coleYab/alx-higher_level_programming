@@ -6,7 +6,7 @@ def roman_to_int(string):
     roman_val = {'i': [1, 0], 'm': [1000, 0], 'd': [500, 0],
                  'l': [50, 0], 'x': [10, 0], 'v': [5, 0], 'c': [100, 0]}
     rep_3 = 'ixcm'
-    if not string:
+    if not str:
         return 0
     if string[len(string) - 2:] == 'iv':
         integer += 4
