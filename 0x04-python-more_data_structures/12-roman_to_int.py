@@ -8,29 +8,30 @@ def roman_to_int(string):
     rep_3 = 'ixcm'
     if not str:
         return 0
-    if string[len(string) - 2:] == 'iv':
+    check = True if len(string) >= 2 else False
+    if string[len(string) - 2:] == 'iv' and check:
         integer += 4
         index -= 2
         roman_val['i'][1] += 1
         roman_val['v'][1] += 1
-    elif string[len(string) - 2:] == 'ix':
+    elif string[len(string) - 2:] == 'ix' and check:
         integer += 9
         index -= 2
         roman_val['i'][1] += 1
         roman_val['x'][1] += 1
-    if len(string) <= 2:
-        return integer
-    for i in range(index):
-        if string[i] in roman_val.keys():
-            integer += roman_val[string[i]][0]
-            roman_val[string[i]][1] += 1
-        else:
-            return 0
-    for i, v in roman_val.items():
-        if i in rep_3:
-            if v[1] > 3:
+    check = False if len(string) < 3 else True
+    if check:
+        for i in range(index):
+            if string[i] in roman_val.keys():
+                integer += roman_val[string[i]][0]
+                roman_val[string[i]][1] += 1
+            else:
                 return 0
-        else:
-            if v[1] > 1:
-                return 0
+        for i, v in roman_val.items():
+            if i in rep_3:
+                if v[1] > 3:
+                    return 0
+            else:
+                if v[1] > 1:
+                    return 0
     return integer if integer >= 1 and integer <= 3999 else 0
