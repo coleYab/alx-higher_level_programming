@@ -6,7 +6,7 @@ def roman_to_int(string):
     roman_val = {'i': [1, 0], 'm': [1000, 0], 'd': [500, 0],
                  'l': [50, 0], 'x': [10, 0], 'v': [5, 0], 'c': [100, 0]}
     rep_3 = 'ixcm'
-    if (len(string) == 0):
+    if not string:
         return 0
     if string[len(string) - 2:] == 'iv':
         integer += 4
@@ -18,6 +18,8 @@ def roman_to_int(string):
         index -= 2
         roman_val['i'][1] += 1
         roman_val['x'][1] += 1
+    if len(string) <= 2:
+        return integer
     for i in range(index):
         if string[i] in roman_val.keys():
             integer += roman_val[string[i]][0]
