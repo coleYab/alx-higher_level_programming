@@ -1,7 +1,8 @@
 #!usr/bin/python3
-"""Defining a class named a square"""
+"""Class module"""
 
 
 class Square:
-    """ A class to abstract the sqare data type """
+    """A class to abstract the sqare data type."""
+
     pass
