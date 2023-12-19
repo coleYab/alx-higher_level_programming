@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A module to abstract the class."""
 
+
 class Square:
     """A class that will be used to abstract the square"""
 
@@ -18,6 +19,7 @@ class Square:
     def size(self):
         """Simple function to set and get values"""
         return (self.__size)
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -33,7 +35,10 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not isinstance(value, tuple) or len(value) != 2:
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = (value[0], value[1])
 
@@ -45,7 +50,7 @@ class Square:
         for j in range(self.__position[1]):
             print()
         for k in range(self.__size):
-            for l in range(self.__position[0]):
+            for u in range(self.__position[0]):
                 print(" ", end='')
             for m in range(self.__size):
                 print("#", end='')
