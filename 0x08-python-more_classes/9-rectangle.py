@@ -70,15 +70,15 @@ class Rectangle:
 
     def bigger_or_equal(rect_1, rect_2):
         if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an integer")
+            raise TypeError("rect_1 must be an instance of Tectange")
         if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be a type of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         return rect_1 if rect_1.area() >= rect_2.area() else rect_2
 
     @classmethod
     def square(cls, size=0):
         if not isinstance(size, int):
-            raise TypeError("szie must be an integer")
+            raise TypeError("height must be an integer")
         elif size < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("height must be >= 0")
         return cls(size, size)
