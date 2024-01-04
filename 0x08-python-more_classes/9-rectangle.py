@@ -78,12 +78,3 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         return Rectangle(size, size)
-
-
-if __name__ == '__main__':
-    try:
-        square = Rectangle.square('d')
-        # print(f"area -> {square.area()}, perimeter -> {square.perimeter()}")
-    except Exception as e:
-        # print(f"[{e.__name__}] -> {e}")
-        print(e)
