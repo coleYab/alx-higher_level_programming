@@ -11,7 +11,7 @@ class Rectangle:
         """Constructor"""
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
-        if not isinstance(width, int):
+        elif not isinstance(width, int):
             raise TypeError("width must be an integer")
         else:
             self.height = height
