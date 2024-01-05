@@ -8,6 +8,7 @@ A module to abstract a locked class
     - __init__: constructor
 """
 
+
 class LockedClass:
     """Uses slots to store the set of allowed attribute"""
     __slots__ = ['first_name']
