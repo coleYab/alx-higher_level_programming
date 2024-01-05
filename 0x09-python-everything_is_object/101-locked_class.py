@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """
 A module to abstract a locked class
 
@@ -11,8 +11,6 @@ A module to abstract a locked class
 class LockedClass:
     """Uses slots to store the set of allowed attribute"""
     __slots__ = ['first_name']
+
     def __init__(self):
         pass
-    
-    
-
