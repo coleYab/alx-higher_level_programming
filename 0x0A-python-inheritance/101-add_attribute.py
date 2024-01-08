@@ -7,8 +7,8 @@ def add_attribute(a_obj, name, value):
 
     if not hasattr(a_obj, '__dict__'):
         raise TypeError("can't add new element")
-    elif '__slots__' in dict(a_obj.__class__):
+    elif '__slots__' in dir(a_obj.__class__):
         raise TypeError("can't add new element")
-    elif name in dict(a_obj.__class__):
+    elif name in dir(a_obj.__class__):
         raise TypeError("can't add new element")
     setattr(a_obj, name, value)
