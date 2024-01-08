@@ -1,0 +1,15 @@
+===============
+Test suits for a function
+===============
+
+Import the function:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Test Suits:
+    >>> l = BaseGeometry()
+    >>> bg.integer_validator("name", 10)
+    >>> bg.integer_validator("name", 10)
+    >>> bg.integer_validator("name", 10)
+    >>> bg.integer_validator("name", 10)
+    >>> bg.integer_validator("name", 10)
+    >>> bg.integer_validator("name", 10)
