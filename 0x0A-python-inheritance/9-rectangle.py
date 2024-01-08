@@ -40,3 +40,7 @@ class Rectangle(BaseGeometry):
         """a module to print the string representation
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
+
+    def area(self):
+        """Returns the area of the rectangle"""
+        return self.__height * self.__width
