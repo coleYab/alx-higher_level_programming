@@ -54,9 +54,12 @@ class Square(Rectangle):
             self.integer_validator("size", size)
         except Exception as e:
             raise e.__class__(e)
-        super().__init__(size, size)
         self.__size = size
 
     def area(self):
         """Module to calculate an area"""
         return self.__size ** 2
+    
+    def __str__(self):
+        """String representation of the class"""
+        return f"[Square] {self.__size}/{self.__size}"
