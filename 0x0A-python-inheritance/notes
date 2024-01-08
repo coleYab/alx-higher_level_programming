@@ -1,0 +1,5 @@
+isinstance(objname, class)  ->> checks if an object is an instance
+of a class specified.
+
+issubclass(class, classinfo) -> checks if a class is subclass of another class
+
