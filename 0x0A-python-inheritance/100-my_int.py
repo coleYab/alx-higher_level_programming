@@ -6,8 +6,8 @@ class MyInt(int):
     """Class to represent rebel from int"""
     def __eq__(self, num):
         """Returns the representationn of equal"""
-        return not super().__eq__(self, num)
+        return super().__ne__(num)
     
     def __ne__(self, num):
         """the represenattion of not equal"""
-        return super().__eq__(self, num)
+        return super().__eq__(num)
