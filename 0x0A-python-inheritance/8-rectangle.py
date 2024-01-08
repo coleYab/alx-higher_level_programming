@@ -17,14 +17,15 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 
+
 class Rectangle(BaseGeometry):
     """Class that inherits from Base Geometery"""
 
     def __init__(self, width, height):
         """Costructor"""
-        if (BaseGeometry.integer_validator(width)):
+        if (self.integer_validator(width)):
             self.__width = width
-        if (BaseGeometry.integer_validator(height)):
+        if (self.integer_validator(height)):
             self.__height = height
 
     def __str__(self):
@@ -35,3 +36,7 @@ class Rectangle(BaseGeometry):
     def area(self):
         """Returns the area of the rectangle"""
         return self.__height * self.__width
+
+    def integer_validator(self, name, value):
+        """A module to validate the integer passeed"""
+        return type(value) != int and value >= 0
