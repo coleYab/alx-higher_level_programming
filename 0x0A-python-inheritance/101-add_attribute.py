@@ -2,9 +2,13 @@
 """Module to add an attribute"""
 
 
-def add_attribute(a_class, name, value):
+def add_attribute(a_obj, name, value):
     """Adds an attribute to an element"""
 
-    if not hasattr(a_class, '__dict__'):
+    if not hasattr(a_obj, '__dict__'):
         raise TypeError("can't add new element")
-    setattr(a_class, name, value)
+    elif '__slots__' in dict(a_obj.__class__):
+        raise TypeError("can't add new element")
+    elif name in dict(a_obj.__class__):
+        raise TypeError("can't add new element")
+    setattr(a_obj, name, value)
