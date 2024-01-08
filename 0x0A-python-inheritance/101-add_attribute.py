@@ -10,4 +10,5 @@ def add_attribute(a_obj, name, value):
     elif '__slots__' in dir(a_obj.__class__):
         raise TypeError("can't add new attribute")
     elif name in dir(a_obj.__class__):
-        raise TypeError("can't add new attribute")    setattr(a_obj, name, value)
+        raise TypeError("can't add new attribute")
+    setattr(a_obj, name, value)
