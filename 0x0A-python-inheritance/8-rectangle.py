@@ -23,10 +23,18 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """Costructor"""
-        if (self.integer_validator(width)):
-            self.__width = width
-        if (self.integer_validator(height)):
-            self.__height = height
+        try:
+            self.integer_validator("width", width)
+        except Exception as e:
+            raise e.__class__(e)
+
+        try:
+            self.integer_validator("height", height)
+        except Exception as e:
+            raise e.__class__(e)        
+
+        self.__width = width
+        self.__height = height
 
     def __str__(self):
         """a module to print the string representation
@@ -36,7 +44,3 @@ class Rectangle(BaseGeometry):
     def area(self):
         """Returns the area of the rectangle"""
         return self.__height * self.__width
-
-    def integer_validator(self, name, value):
-        """A module to validate the integer passeed"""
-        return type(value) != int and value >= 0
