@@ -1,0 +1,25 @@
+=================
+Test Suits
+=================
+
+Importing the test:
+    >>> MyList = __import__('1-my_list').MyList
+
+Testing the class:
+    >>> list_new = MyList()
+    >>> list_new.append(1)
+    >>> list_new.append(2)
+    >>> list_new.append(3)
+    >>> list_new.append(4)
+    >>> list_new.append(5)
+    >>> list_new.append(5)
+    >>> list_new.append(6)
+    >>> list_new.append(6)
+    >>> list_new.append(6)
+    >>> list_new.append(7)
+    >>> list_new.append(7)
+    >>> print(list_new)
+    [1, 2, 3, 4, 5, 5, 6, 6, 6, 7, 7]
+    >>> list_new.print_sorted()
+    [1, 2, 3, 4, 5, 5, 6, 6, 6, 7, 7]
+    
