@@ -2,6 +2,7 @@
 """is a module to create an empity class"""
 
 
-class BaseGeometery:
+class BaseGeometry:
     """Empty class base geometery"""
+
     pass
