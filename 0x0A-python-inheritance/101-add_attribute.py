@@ -4,9 +4,6 @@
 
 def add_attribute(a_class, name, value):
     """Adds an attribute to an element"""
-    if '__slots__' in dir(a_class):
+    if hasattr(a_class, '__dict__'):
         raise TypeError("can't add new element")
-    elif name not in dir(a_class):
-        setattr(a_class, name, value)
-    else:
-        raise TypeError("can't add new element")
+    setattr(a_class, name, value)
