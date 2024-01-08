@@ -30,7 +30,7 @@ class Rectangle(BaseGeometry):
         try:
             self.integer_validator("height", height)
         except Exception as e:
-            raise e.__class__(e)        
+            raise e.__class__(e)
 
         self.__width = width
         self.__height = height
@@ -59,7 +59,7 @@ class Square(Rectangle):
     def area(self):
         """Module to calculate an area"""
         return self.__size ** 2
-    
+
     def __str__(self):
         """String representation of the class"""
         return f"[Square] {self.__size}/{self.__size}"

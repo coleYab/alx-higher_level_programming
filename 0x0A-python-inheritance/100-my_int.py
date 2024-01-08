@@ -7,7 +7,7 @@ class MyInt(int):
     def __eq__(self, num):
         """Returns the representationn of equal"""
         return super().__ne__(num)
-    
+
     def __ne__(self, num):
         """the represenattion of not equal"""
         return super().__eq__(num)

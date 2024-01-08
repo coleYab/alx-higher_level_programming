@@ -30,7 +30,7 @@ class Rectangle(BaseGeometry):
         try:
             self.integer_validator("height", height)
         except Exception as e:
-            raise e.__class__(e)        
+            raise e.__class__(e)
 
         self.__width = width
         self.__height = height
