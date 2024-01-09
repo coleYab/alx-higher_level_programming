@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-"""Pascal triangle printing"""
+"""Defines a Pascal's Triangle function."""
 
 
 def pascal_triangle(n):
-    """Prints the pascal triangle"""
-    lists = []
+    """Represent Pascal's Triangle of size n.
 
-    def fact(num):
-        """Calculates the fact of nums"""
-        return 1 if num == 0 else num * fact(num - 1)
-
+    Returns a list of lists of integers representing the triangle.
+    """
     if n <= 0:
-        return lists
-    for i in range(n):
-        val = [
-            int(fact(i) / (fact(j) * fact(i - j))) for j in range(i + 1)
-        ]
-        lists.append(val[:])
+        return []
 
-    return lists
+    triangles = [[1]]
+    while len(triangles) != n:
+        tri = triangles[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        triangles.append(tmp)
+    return triangles
