@@ -1,25 +1,22 @@
 #!/usr/bin/python3
-"""A module that convert a class to a string"""
+"""A module that converts a class to a JSON-formatted string"""
 
 
 def class_to_json(a_obj):
-    """Converts a class to an object"""
+    """Converts a class to a JSON-formatted string"""
+    def convert_value(value):
+        """Convert non-string values to string representation"""
+        if isinstance(value, str):
+            return f"'{value}'"
+        else:
+            return str(value)
 
     dic = a_obj.__dict__
+    
+    # Convert key-value pairs to JSON-formatted string
+    json_pairs = [f"'{key}': {convert_value(value)}" for key, value in dic.items()]
 
-    string = []
-    for key, value in dic.items():
-        p_h = "'"
-        if not isinstance(value, str):
-            p_h = ""
-        string.append(f"'{key}': {p_h}{value}{p_h}")
+    # Construct the final JSON string
+    json_string = "{" + ", ".join(json_pairs) + "}"
 
-    msg = "{"
-    for i in range(len(string) - 1):
-        msg += string[i]
-        msg += ", "
-
-    msg += string[-1]
-    msg += "}"
-
-    return msg
+    return json_string
