@@ -27,4 +27,4 @@ class Student:
     def reload_from_json(self, json):
         """Reloads the file representation of an instance"""
 
-        self.__dict__ = json
+        self.__dict__ = dict(json)
