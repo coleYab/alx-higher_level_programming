@@ -12,7 +12,7 @@ def class_to_json(a_obj):
         p_h = "'"
         if not isinstance(value, str):
             p_h = ""
-        string.append(f'"{key}": {p_h}{value}{p_h}')
+        string.append(f"'{key}': {p_h}{value}{p_h}")
 
     msg = "{"
     for i in range(len(string) - 1):
