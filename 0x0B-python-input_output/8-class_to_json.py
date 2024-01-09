@@ -9,17 +9,17 @@ def class_to_json(a_obj):
 
     string = []
     for key, value in dic.items():
-        p_h = '"'
+        p_h = "'"
         if not isinstance(value, str):
-            p_h = ''
+            p_h = ""
         string.append(f'"{key}": {p_h}{value}{p_h}')
 
-    msg = '{'
+    msg = "{"
     for i in range(len(string) - 1):
         msg += string[i]
-        msg += ', '
+        msg += ", "
 
     msg += string[-1]
-    msg += '}'
+    msg += "}"
 
     return msg
