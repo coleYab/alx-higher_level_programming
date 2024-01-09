@@ -29,4 +29,3 @@ if __name__ == '__main__':
         jsoned.append(sys.argv[i])
 
     save_to_json_file(jsoned, 'add_item.json')
-    
