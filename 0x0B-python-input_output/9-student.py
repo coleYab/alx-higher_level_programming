@@ -7,7 +7,7 @@ class Student:
     def __init__(self, first_name, second_name, age):
         """Constructor"""
         self.first_name = first_name
-        self.second_name = second_name
+        self.last_name = second_name
         self.age = age
 
     def to_json(self):
