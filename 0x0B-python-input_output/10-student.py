@@ -19,8 +19,6 @@ class Student:
             for i in attr:
                 if i in dic.keys() and isinstance(i, str):
                     dictt[i] = self.__dict__[i]
-                else:
-                    break
 
                 return dictt
 
