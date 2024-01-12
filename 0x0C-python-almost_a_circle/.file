@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+"""Tests the code from the rectangle module"""
+
+
+from models import rectangle
+from models import base
+import unittest
+
+
+class TestRectangle(unittest.TestCase):
+    """The test to test the rectangle module"""
+    def test_value_error(self):
+        """Test if a value error is raised"""
+        with self.assertRaises(ValueError):
+            cls = rectangle.Rectangle(12, 12, -1)
+        with self.assertRaises(ValueError):
+            cls = rectangle.Rectangle(12, 12, -12, 21, 12)
+        with self.assertRaises(ValueError):
+            cls = rectangle.Rectangle(0, 0)
+
+    def test_type_error(self):
+        """checks if a type error is raised"""
+        with self.assertRaises(TypeError):
+            cls = rectangle.Rectangle()
+        with self.assertRaises(TypeError):
+            cls = rectangle.Rectangle(12, "thsi")
+        with self.assertRaises(TypeError):
+            cls = rectangle.Rectangle("maf")
