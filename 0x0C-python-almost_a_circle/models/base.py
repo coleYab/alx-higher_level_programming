@@ -123,7 +123,7 @@ class Base:
         """
         turt = turtle.Turtle()
         turt.screen.bgcolor("red")
-        turt.pensize(3)
+        turt.pensize(12)
         turt.shape("turtle")
 
         turt.color("black")
