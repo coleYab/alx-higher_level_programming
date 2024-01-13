@@ -4,7 +4,6 @@
 
 from models import base
 import unittest
-import json
 
 
 class TestBase(unittest.TestCase):
