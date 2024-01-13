@@ -1,11 +1,11 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """A class named rectagle that inherits from base"""
 
 
-from models import base
+from models.base import Base
 
 
-class Rectangle(base.Base):
+class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor for the Rectangle Class"""
         self.width = width
@@ -36,7 +36,7 @@ class Rectangle(base.Base):
     def height(self, value):
         if type(value) != int:
             raise TypeError("height must be an integer")
-        if value < 0:
+        if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -74,9 +74,31 @@ class Rectangle(base.Base):
         """A method to display itsself"""
         pre_msg = '\n' * self.__y
         msg = ''.join((' ' * self.__x) + '#' * self.__width + '\n')
-        print((pre_msg + msg) * self.__height)
+        print(pre_msg + (msg * self.__height), end='')
 
     def __str__(self):
         """Method to display the string represetation of my class"""
-        my_str1 = f"[Rectangle] ({self.id})<{self.__x}>/<{self.__y}>"
-        return (f"{my_str1} - <{self.__width}>/<{self.__height}>")
+        my_str1 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
+        return (f"{my_str1} - {self.__width}/{self.__height}")
+
+    def update(self, *args, **kwargs):
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
+        else:
+            for keys, value in kwargs.items():
+                    setattr(self, keys, value)
+
+    def to_dictionary(self):
+        return {
+            "id": self.id, "width": self.width,
+            "height": self.height, "x": self.x,
+            "y": self.y
+        }
+

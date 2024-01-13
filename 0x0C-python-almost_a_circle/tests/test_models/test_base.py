@@ -4,6 +4,7 @@
 
 from models import base
 import unittest
+import json
 
 
 class TestBase(unittest.TestCase):
@@ -32,3 +33,9 @@ class TestBase(unittest.TestCase):
         for i in range(4):
             obj = base.Base()
             self.assertEqual(obj.id, 17 + i)
+
+    def to_dictionary(self):
+        return {
+            "id": self.id, "size": self.width,
+            "x": self.x, "y": self.y
+        }
