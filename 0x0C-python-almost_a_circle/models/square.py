@@ -8,13 +8,16 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """A class that will abstract the real square"""
     def __init__(self, size, x=0, y=0, id=None):
+        """Cosructor for the square"""
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """Returns the string represenatation of the clsss"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     @property
     def size(self):
+        """getter and setter for the size"""
         return self.width
 
     @size.setter
@@ -37,6 +40,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """Returns the dicionary represenation of the string"""
         return {
             "id": self.id, "size": self.size,
             "x": self.x, "y": self.y

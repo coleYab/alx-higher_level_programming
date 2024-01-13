@@ -82,6 +82,7 @@ class Rectangle(Base):
         return (f"{my_str1} - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
+        """Updates the instances by themselves"""
         if len(args) != 0:
             try:
                 self.id = args[0]
@@ -93,9 +94,10 @@ class Rectangle(Base):
                 pass
         else:
             for keys, value in kwargs.items():
-                    setattr(self, keys, value)
+                setattr(self, keys, value)
 
     def to_dictionary(self):
+        """Converts the class to a dictionary"""
         return {
             "id": self.id, "width": self.width,
             "height": self.height, "x": self.x,
