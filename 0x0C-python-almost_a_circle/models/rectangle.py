@@ -10,9 +10,7 @@ Returns:
 int or float: The sum of num1 and num2.
 """
 
-
-Base = __import__('base').Base
-
+from models.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
