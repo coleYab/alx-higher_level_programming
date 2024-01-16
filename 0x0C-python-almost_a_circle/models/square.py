@@ -22,6 +22,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
+        """A setter to the size function value"""
         self.width = value
         self.height = value
 
@@ -37,7 +38,7 @@ class Square(Rectangle):
                 pass
         else:
             for key, value in kwargs.items():
-                    setattr(self, key, value)
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns the dicionary represenation of the string"""
