@@ -1,5 +1,14 @@
 #!/usr/bin/python3
-"""A class named rectagle that inherits from base"""
+"""
+Adds two numbers and returns the result.
+
+Parameters:
+- num1 (int or float): The first number to be added.
+- num2 (int or float): The second number to be added.
+
+Returns:
+int or float: The sum of num1 and num2.
+"""
 
 
 Base = __import__('base').Base
@@ -7,7 +16,16 @@ Base = __import__('base').Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Constructor for the Rectangle Class"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -16,7 +34,16 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """property setter and geter for the values"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return self.__width
 
     @width.setter
@@ -29,7 +56,16 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """property setter and geter for the values"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return self.__height
 
     @height.setter
@@ -42,7 +78,16 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """property setter and geter for the values"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return self.__x
 
     @x.setter
@@ -55,7 +100,16 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """property setter and geter for the values"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return self.__y
 
     @y.setter
@@ -67,22 +121,58 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """A method to calculate the area of the Rectangle"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return self.__height * self.__width
 
     def display(self):
-        """A method to display itsself"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         pre_msg = '\n' * self.__y
         msg = ''.join((' ' * self.__x) + '#' * self.__width + '\n')
         print(pre_msg + (msg * self.__height), end='')
 
     def __str__(self):
-        """Method to display the string represetation of my class"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         my_str1 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
         return (f"{my_str1} - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
-        """Updates the instances by themselves"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         if len(args) != 0:
             try:
                 self.id = args[0]
@@ -97,7 +187,16 @@ class Rectangle(Base):
                 setattr(self, keys, value)
 
     def to_dictionary(self):
-        """Converts the class to a dictionary"""
+        """
+            Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return {
             "id": self.id, "width": self.width,
             "height": self.height, "x": self.x,

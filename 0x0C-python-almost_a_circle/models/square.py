@@ -1,33 +1,86 @@
 #!/usr/bin/python3
-"""The module to test the square model"""
+"""
+Adds two numbers and returns the result.
+
+Parameters:
+- num1 (int or float): The first number to be added.
+- num2 (int or float): The second number to be added.
+
+Returns:
+int or float: The sum of num1 and num2.
+"""
 
 
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """A class that will abstract the real square"""
+    """
+    Adds two numbers and returns the result.
+
+    Parameters:
+    - num1 (int or float): The first number to be added.
+    - num2 (int or float): The second number to be added.
+
+    Returns:
+    int or float: The sum of num1 and num2.
+    """
     def __init__(self, size, x=0, y=0, id=None):
-        """Cosructor for the square"""
+        """
+        Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Returns the string represenatation of the clsss"""
+        """
+        Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     @property
     def size(self):
-        """getter and setter for the size"""
+        """
+        Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return self.width
 
     @size.setter
     def size(self, value):
-        """A setter to the size function value"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """updates the square based on the inputs provided"""
+        """
+        Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         if len(args) != 0:
             try:
                 self.id = args[0]
@@ -41,7 +94,16 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """Returns the dicionary represenation of the string"""
+        """
+        Adds two numbers and returns the result.
+
+        Parameters:
+        - num1 (int or float): The first number to be added.
+        - num2 (int or float): The second number to be added.
+
+        Returns:
+        int or float: The sum of num1 and num2.
+        """
         return {
             "id": self.id, "size": self.size,
             "x": self.x, "y": self.y
