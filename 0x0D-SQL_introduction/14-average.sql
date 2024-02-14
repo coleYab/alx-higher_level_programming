@@ -1,0 +1,3 @@
+-- SELECTING THE AVERAGE VALUES
+SELECT AVG(score) FROM second_table;
+
