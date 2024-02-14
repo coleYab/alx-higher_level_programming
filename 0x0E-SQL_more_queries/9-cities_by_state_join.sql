@@ -1,3 +1,3 @@
 -- using join
-SELECT cities.id, cities.name, state.name FROM cities INNER JOIN states;
+SELECT cities.id, cities.name, state.name FROM cities JOIN states ON cities.state_id = states.id;
 
