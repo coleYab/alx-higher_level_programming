@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""Module to select all states"""
 import MySQLdb
 import sys
 
+
 if __name__ == '__main__':
+    """This is the main function"""
     av = sys.argv
     con = MySQLdb.connect(
         port=3306, user=av[1], passwd=av[2], db=av[3], charset="utf8"
@@ -14,3 +17,4 @@ if __name__ == '__main__':
         print(rows)
     curs.close()
     con.close()
+
