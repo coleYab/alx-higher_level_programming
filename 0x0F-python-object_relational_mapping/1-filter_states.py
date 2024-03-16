@@ -9,7 +9,7 @@ if __name__ == '__main__':
         user=av[1], passwd=av[2], db=av[3], port=3306, charset="utf8"
     )
     curser = conn.cursor()
-    curser.execute("SELECT * FROM state WHERE name LIKE 'N%' ORDER BY id")
+    curser.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
     for rows in curser.fetchall():
         print(rows)
     curser.close()
