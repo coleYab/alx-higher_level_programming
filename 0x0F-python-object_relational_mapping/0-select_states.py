@@ -3,8 +3,10 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    argv = sys.argv
-    con = MySQLdb.connect(host = "localhost", port = 3306, user = argv[1], passwd = argv[2], db = argv[3], charset="utf8")
+    av = sys.argv
+    con = MySQLdb.connect(
+        port=3306, user=av[1], passwd=av[2], db=av[3], charset="utf8"
+    )
     curs = con.cursor()
     curs.execute("SELECT * FROM states ORDER BY id")
     states = curs.fetchall()
@@ -12,4 +14,3 @@ if __name__ == '__main__':
         print(rows)
     curs.close()
     con.close()
-
