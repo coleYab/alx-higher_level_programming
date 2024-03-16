@@ -4,7 +4,6 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    """Files are the name"""
     av = sys.argv
     lh = "localhost"
     dab = MySQLdb.connect(
@@ -12,7 +11,7 @@ if __name__ == '__main__':
     )
     cusr = dab.cursor()
     cusr.execute(
-            f"SELECT * FROM state WHERE name = '{av[4]}' ORDER BY id"
+            "SELECT * FROM states WHERE name = '{}' ORDER BY id".format(av[4])
         )
     for row in cusr.fetchall():
         print(row)
