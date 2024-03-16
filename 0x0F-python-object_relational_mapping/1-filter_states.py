@@ -4,9 +4,10 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    av = sys.argv
+    a = sys.argv
+    lh = "localhost"
     conn = MySQLdb.connect(
-       host="localhost", user=av[1], passwd=av[2], db=av[3], port=3306, charset="utf8"
+        host=lh, user=a[1], passwd=a[2], db=a[3], port=3306, charset="utf8"
     )
     curser = conn.cursor()
     curser.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
