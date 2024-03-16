@@ -12,7 +12,7 @@ if __name__ == '__main__':
     )
     cusr = dab.cursor()
     cusr.execute(
-            """SELECT * FROM states WHERE name = %s ORDER BY id""", [av[4]]
+            f"SELECT * FROM state WHERE name = '{av[4]}' ORDER BY id"
         )
     for row in cusr.fetchall():
         print(row)
