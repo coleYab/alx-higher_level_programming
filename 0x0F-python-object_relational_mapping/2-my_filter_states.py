@@ -4,6 +4,7 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
+    """Files are the name"""
     av = sys.argv
     lh = "localhost"
     dab = MySQLdb.connect(
