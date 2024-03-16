@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module to display the files"""
 import MySQLdb
 import sys
 
