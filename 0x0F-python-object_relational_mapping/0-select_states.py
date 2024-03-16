@@ -3,7 +3,6 @@
 import MySQLdb
 import sys
 
-
 if __name__ == '__main__':
     """This is the main function"""
     av = sys.argv
@@ -17,4 +16,3 @@ if __name__ == '__main__':
         print(rows)
     curs.close()
     con.close()
-
