@@ -9,6 +9,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """State - at the class of the file."""
     __tablename__ = 'states'
 
     id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
